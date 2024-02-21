@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}{% endblock %}
+{% block content %}
+
+
+<div class="container">
+    <header class="text-center mb-5">Sign Up</header>
+    <form action="" method="POST" class="shadow rounded-3 p-3" style="margin: auto; width: 40%;">
+        {% csrf_token %}
+
+        <label for="">Username</label>
+        <input type="text" name="uname" class="form-control mt-2 mb-3" placeholder="Enter username" autocomplete="off">
+
+        <label for="">Email</label>
+        <input type="email" name="email" class="form-control mt-2 mb-3" placeholder="Enter a valid email" autocomplete="off">
+
+        <label for="">Password</label>
+        <input type="password" name="psw" class="form-control mt-2 mb-3" placeholder="Strong Password">
+
+        <label for="">Confirm Password</label>
+        <input type="password" name="psw2" class="form-control mt-2 mb-3" placeholder="Confirm password">
+
+        <input type="submit" value="Sign Up" class="btn btn-primary mx-auto">
+    </form>
+    <a href="{% url 'login' %}" class="btn btn-outline-success text-center">login</a>
+    
+</div>
+
+
+
+
+{% endblock %}

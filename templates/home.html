@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock %}
+{% block content %}
+<h2 class="text-center">Hey, welcome to my Website</h2>
+<br>
+<hr>
+<h4 class="text-center">we design high end web applications</h4>
+<br>
+<br><br><br>
+<h5 class="text-center">Don't have an account?</h5>
+<a href="{% url 'signup' %}" class="btn btn-outline-success text-center">SignUp</a>
+<a href="{% url 'login' %}" class="btn btn-outline-success text-center">login</a>
+{% endblock %}
